@@ -1,5 +1,6 @@
 
 import numpy as np
+import control as cnt
 
 # System Parameters
 
@@ -23,76 +24,148 @@ psi0 = 0.0*np.pi/180   # ,rads
 phidot0 = 0.0          # ,rads/s
 thetadot0 = 0.0        # ,rads/s
 psidot0 = 0.0          # ,rads/s
+F_eq = 5.223
 
 # Simulation parameters
-Ts = 0.01                # Time step
+Ts = 0.0033                # Time step
 sigma = 0.05
 
+
+####################################################
+#                 State Space
+####################################################
 # Set Maximums
 F_max = 12#2*km
 Tau_max = 6#2*km*d
 theta_max = 60 * np.pi/180
 phi_max = 60 * np.pi/180
-psi_max = 60 * np.pi/180
+psi_max = 60 * np.pi/180                   
+
+error_max = 1                # Max step size,m
+M = 3                        # Time scale separation between
+					         # inner and outer loop
+
+# State Space Equations
+# xdot = A*x + B*u
+# y = C*x
 
 ####################################################
-#     PD Control: Design Time Strategy
+############ Longitudinal ##########################
 ####################################################
-zeta = 0.707
-Fe = 5.223#(m1*l1 - m2*l2)*(g/l1)
-b0psi = (l1*Fe)/(m1*l1**2 + m2*l2**2 +Jz)# +Jx
-b0phi = 1/Jx
-b0th = l1/(m1*l1**2 + m2*l2**2 + Jy)#1.152
+
+A_long = np.matrix([[0.0, 1.0], [0.0, 0.0]])
+
+B_long = np.matrix([[0.0], [l1/(m1*l1**2+m2*l2**2+Jy)]])
+
+C_long = np.matrix([[1.0, 0.0]])
+Cr_long = C_long
+
+# Augmented Matrices
+A1_long = np.concatenate((
+	np.concatenate((A_long,np.zeros((2,1))),axis=1),
+	np.concatenate((-Cr_long,np.matrix([[0.0]])),axis=1)),axis = 0)
+
+B1_long = np.concatenate((B_long,np.matrix([[0.0]])),axis = 0)
+
+# Desired Closed Loop tuning parameters
+# S**2 + 2*zeta*wn*S + wn**2
+
+th_tr = 2.0           # Rise time, s
+th_zeta = 0.707       # Damping Coefficient
+th_wn = 2.2/th_tr     # Natural frequency
+
+# S**2 + alpha1*S + alpha0
+th_alpha1 = 2.0*th_zeta*th_wn
+th_alpha0 = th_wn**2 
+
+integrator_pole_long = -10.0
+
+
+# Desired Poles
+des_char_poly_long = np.convolve([1,th_alpha1,th_alpha0],
+	np.poly(integrator_pole_long))
+des_poles_long = np.roots(des_char_poly_long)
+
+
+# Controllability Matrix
+if np.linalg.matrix_rank(cnt.ctrb(A1_long,B1_long))!=3:
+	print("The longitudinal system is not controllable")
+else:
+	K1_long = cnt.acker(A1_long,B1_long,des_poles_long)
+	K_long = K1_long[0,0:2]
+	ki_long = K1_long[0,2]
+	print('K1_long: ', K1_long)
+	print('K_long: ', K_long)
+	print('ki_long: ', ki_long)
+
+###############################################
+############ Lateral ##########################
+###############################################
+
+A_lat = np.matrix([[0.0,	0.0,               1.0,      0.0],
+			   [0.0,		0.0,               0.0,      1.0],
+			   [0.0,		0.0,          		0.0,     0.0],
+			   [l1*F_eq/(m1*(l1**2)+m2*(l2**2)+Jz),			0.0,				0.0, 	0.0]])
+
+B_lat = np.matrix([[0.0],
+			   [0.0],
+			   [1.0/Jx],
+			   [0.0]])
+
+C_lat = np.matrix([[1.0,0.0,0.0,0.0],
+			   [0.0,1.0,0.0,0.0]])
+Cr_lat = np.matrix([[0.0, 1.0, 0.0, 0.0]])
+
+# Augmented Matrices
+A1_lat = np.concatenate((
+	np.concatenate((A_lat,np.zeros((4,1))),axis=1),
+	np.concatenate((-Cr_lat,np.matrix([[0.0]])),axis=1)),axis = 0)
+
+B1_lat = np.concatenate((B_lat,np.matrix([[0.0]])),axis = 0)
+
+# Desired Closed Loop tuning parameters
+# S**2 + 2*zeta*wn*S + wn**2
+
+psi_tr = 0.5           # Rise time, s
+psi_zeta = 0.707       # Damping Coefficient
+psi_wn = 2.2/th_tr     # Natural frequency
+
+# S**2 + alpha1*S + alpha0
+psi_alpha1 = 2.0*psi_zeta*psi_wn
+psi_alpha0 = psi_wn**2 
+
+# Desired Closed Loop tuning parameters
+# S**2 + 2*zeta*wn*S + wn**2
+
+phi_tr = psi_tr*M      # Rise time, s
+phi_zeta = 0.707      # Damping Coefficient
+phi_wn = 2.2/phi_tr     # Natural frequency
+integrator_pole_lat = -10.0
+
+# S**2 + alpha1*S + alpha0
+phi_alpha1 = 2.0*phi_zeta*phi_wn
+phi_alpha0 = phi_wn**2 
+
+# Desired Poles
+des_char_poly_lat = np.convolve(
+	np.convolve([1,psi_alpha1,psi_alpha0],[1,phi_alpha1,phi_alpha0]),
+	np.poly(integrator_pole_lat))
+des_poles_lat = np.roots(des_char_poly_lat)
+
+
+# Controllability Matrix
+if np.linalg.matrix_rank(cnt.ctrb(A1_lat,B1_lat))!=5:
+	print("The lateral system is not controllable")
+else:
+	K1_lat = cnt.acker(A1_lat,B1_lat,des_poles_lat)
+	K_lat = K1_lat[0,0:4]
+	ki_lat = K1_lat[0,4]
+	print('K1_lat: ', K1_lat)
+	print('K_lat: ', K_lat)
+	print('ki_lat: ', ki_lat)
 
 
 
-#==================================================
-#                 Longitudinal
-#==================================================
-# Theta
-th_zeta = 0.8
-tr_th = 1.4
-wn_th = 2.2/tr_th
-theta_kp = (wn_th**2)/(b0th)
-theta_kd = (2*th_zeta*wn_th)/b0th
-theta_ki = 0.25#.25#0.5
-
-
-#==================================================
-#                 Lateral
-#==================================================
-
-
-#---------------------------------------------------
-#                    Inner Loop
-#---------------------------------------------------
-# phi
-zeta_phi = 1.0
-tr_phi = 0.25#0.4#0.3
-wn_phi = 2.2/tr_phi
-phi_kp = (wn_phi**2)*Jx#/b0phi
-phi_kd = (2*zeta_phi*wn_phi)*Jx#/(b0phi)
-
-
-#---------------------------------------------------
-#                  Outer Loop         
-#---------------------------------------------------
-# psi
-zeta_psi = 0.8 # 1.0
-tr_psi = tr_phi*8#3.0 # 3.0
-wn_psi = 2.2/tr_psi
-psi_kp = (wn_psi**2)/b0psi
-psi_kd = (2*zeta_psi*wn_psi)/b0psi #.24491
-psi_ki = 0.02#0.001#0.001#0.005#0.015#1.0
-
-print("theta_kp: ", theta_kp)
-print("theta_kd: ", theta_kd)
-print("phi_kp: ", phi_kp)
-print("phi_kd: ", phi_kd)
-print("psi_kp: ", psi_kp)
-print("psi_kd: ", psi_kd)
-print("F_max: ", F_max)
-print("Tau_max: ", Tau_max)
 
 #################################################
 #          Uncertainty Parameters
