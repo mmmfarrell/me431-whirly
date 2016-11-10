@@ -18,8 +18,8 @@ Jz = 0.0041            # , kg-m**2
 km = 5.8#6.293 #5.8               # , N/PWM
 
 # Initial Conditions
-phi0 =   0.0*np.pi/180 # ,rads
-theta0 = -.48632 #0.0*np.pi/180 # ,rads
+phi0 =   0.0#-1.79#0.0*np.pi/180 # ,rads
+theta0 = -.44 #0.0*np.pi/180 # ,rads
 psi0 = 0.0*np.pi/180   # ,rads
 phidot0 = 0.0          # ,rads/s
 thetadot0 = 0.0        # ,rads/s
@@ -128,9 +128,9 @@ B1_lat = np.concatenate((B_lat,np.matrix([[0.0]])),axis = 0)
 # Desired Closed Loop tuning parameters
 # S**2 + 2*zeta*wn*S + wn**2
 
-psi_tr = 0.5           # Rise time, s
-psi_zeta = 0.707       # Damping Coefficient
-psi_wn = 2.2/th_tr     # Natural frequency
+psi_tr = 2.0#0.5           # Rise time, s
+psi_zeta = 0.8#0.707       # Damping Coefficient
+psi_wn = 2.2/psi_tr     # Natural frequency
 
 # S**2 + alpha1*S + alpha0
 psi_alpha1 = 2.0*psi_zeta*psi_wn
@@ -139,8 +139,8 @@ psi_alpha0 = psi_wn**2
 # Desired Closed Loop tuning parameters
 # S**2 + 2*zeta*wn*S + wn**2
 
-phi_tr = psi_tr*M      # Rise time, s
-phi_zeta = 0.707      # Damping Coefficient
+phi_tr = 1.5#0.66667#psi_tr/M      # Rise time, s
+phi_zeta = 1.0#0.707      # Damping Coefficient
 phi_wn = 2.2/phi_tr     # Natural frequency
 integrator_pole_lat = -15.0
 
