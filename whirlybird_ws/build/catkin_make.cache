@@ -1,2 +1,2 @@
 whirlybird_calibration:whirlybird_controller:whirlybird_hardware:whirlybird_msgs
--DCATKIN_DEVEL_PREFIX=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel -DCMAKE_INSTALL_PREFIX=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel -DCMAKE_INSTALL_PREFIX=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install -G Unix Makefiles

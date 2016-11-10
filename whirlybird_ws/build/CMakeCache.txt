@@ -21,7 +21,7 @@ BUILD_SHARED_LIBS:BOOL=ON
 CATKIN_BLACKLIST_PACKAGES:STRING=
 
 //catkin devel space
-CATKIN_DEVEL_PREFIX:PATH=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel
+CATKIN_DEVEL_PREFIX:PATH=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel
 
 //Catkin enable testing
 CATKIN_ENABLE_TESTING:BOOL=ON
@@ -99,7 +99,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install
+CMAKE_INSTALL_PREFIX:PATH=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=/usr/bin/ld
@@ -226,7 +226,7 @@ PYTHON_VERSION:STRING=
 Project_BINARY_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build
 
 //Value Computed by CMake
-Project_SOURCE_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
+Project_SOURCE_DIR:STATIC=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
 
 //Path to a library.
 RT_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/librt.so
@@ -323,28 +323,28 @@ std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
 whirlybird_calibration_BINARY_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_calibration
 
 //Value Computed by CMake
-whirlybird_calibration_SOURCE_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_calibration
+whirlybird_calibration_SOURCE_DIR:STATIC=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_calibration
 
 //Value Computed by CMake
 whirlybird_controller_BINARY_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_controller
 
 //Value Computed by CMake
-whirlybird_controller_SOURCE_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller
+whirlybird_controller_SOURCE_DIR:STATIC=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller
 
 //Value Computed by CMake
 whirlybird_hardware_BINARY_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_hardware
 
 //Value Computed by CMake
-whirlybird_hardware_SOURCE_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_hardware
+whirlybird_hardware_SOURCE_DIR:STATIC=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_hardware
 
 //Value Computed by CMake
 whirlybird_msgs_BINARY_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs
 
 //The directory containing a CMake configuration file for whirlybird_msgs.
-whirlybird_msgs_DIR:PATH=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/share/whirlybird_msgs/cmake
+whirlybird_msgs_DIR:PATH=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/share/whirlybird_msgs/cmake
 
 //Value Computed by CMake
-whirlybird_msgs_SOURCE_DIR:STATIC=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs
+whirlybird_msgs_SOURCE_DIR:STATIC=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs
 
 
 ########################

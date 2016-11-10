@@ -33,7 +33,7 @@ class Signals:
 
 	#SECTION 1
 	##################################################################
-		self.handle.append(mySignal(-25*0*np.pi/180,0.02)) # Theta_r
+		self.handle.append(mySignal(-25*np.pi/180,0.02)) # Theta_r
 		self.handle.append(mySignal(-25*np.pi/180,0.02)) # Psi_r
 	##################################################################
 

@@ -1,6 +1,7 @@
 import sys
 import numpy as np 
 import param as P
+import rospy
 
 class controllerSSI:
   ''' This class inherits other controllers in order to organize multiple controllers.'''
@@ -24,8 +25,14 @@ class controllerSSI:
       psi = y[2]
       
       F = self.SSICtrl_long.SSI_loop(theta_r,theta) # Calculate the force output
+      # rospy.logwarn(str(theta_r))
+      # rospy.logwarn(str(theta))
 
       Tau = self.SSICtrl_lat.SSI_loop(psi_r,psi,phi) # Calculate the torque output
+
+      rospy.logwarn(str(F))
+
+      # Tau = 0.0
 
       return [F, Tau]
 
@@ -45,6 +52,7 @@ class SSI_ctrl_long:
   def SSI_loop(self,theta_r,theta):
 
       error = theta_r-theta
+      # rospy.logwarn(str(error))
 
       # Update Differentiator
       a1 = (2*P.sigma - P.Ts)/(2*P.sigma+P.Ts)

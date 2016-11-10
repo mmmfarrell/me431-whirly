@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
+CMAKE_SOURCE_DIR = /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build
@@ -109,6 +109,6 @@ gtest/CMakeFiles/gtest_main.dir/clean:
 .PHONY : gtest/CMakeFiles/gtest_main.dir/clean
 
 gtest/CMakeFiles/gtest_main.dir/depend:
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src /usr/src/gtest /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/gtest /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src /usr/src/gtest /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/gtest /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/CMakeFiles/gtest_main.dir/depend
 

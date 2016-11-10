@@ -47,8 +47,8 @@ def saturatePWM(u):
 	ul = u[0]
 	ur = u[1]
 
-	ul = 1 if ul > 1 else 0 if ul < 0 else ul
-	ur = 1 if ur > 1 else 0 if ur < 0 else ur
+	ul = 0.6 if ul > 0.6 else 0 if ul < 0 else ul
+	ur = 0.6 if ur > 0.6 else 0 if ur < 0 else ur
 	return [ul,ur]
 
 

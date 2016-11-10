@@ -19,7 +19,7 @@ except ImportError:
             break
     from catkin.environment_cache import generate_environment_script
 
-code = generate_environment_script('/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/env.sh')
+code = generate_environment_script('/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/env.sh')
 
 output_filename = '/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/catkin_generated/setup_cached.sh'
 with open(output_filename, 'w') as f:

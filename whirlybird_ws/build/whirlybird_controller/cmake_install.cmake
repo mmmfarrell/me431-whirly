@@ -1,8 +1,8 @@
-# Install script for directory: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller
+# Install script for directory: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -44,6 +44,6 @@ if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/whirlybird_controller" TYPE FILE FILES "/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/whirlybird_controller" TYPE FILE FILES "/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_controller/package.xml")
 endif()
 

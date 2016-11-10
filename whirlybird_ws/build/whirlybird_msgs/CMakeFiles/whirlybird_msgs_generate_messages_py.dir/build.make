@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
+CMAKE_SOURCE_DIR = /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build
@@ -53,39 +53,39 @@ CMAKE_BINARY_DIR = /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build
 # Include the progress variables for this target.
 include whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/progress.make
 
-whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
-whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
-whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
-whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py
+whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
+whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
+whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
+whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py
 
 
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Command.msg
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Command.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python from MSG whirlybird_msgs/Command"
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Command.msg -Iwhirlybird_msgs:/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Command.msg -Iwhirlybird_msgs:/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
 
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/MyStates.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG whirlybird_msgs/MyStates"
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/MyStates.msg -Iwhirlybird_msgs:/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Whirlybird.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Python from MSG whirlybird_msgs/Whirlybird"
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Whirlybird.msg -Iwhirlybird_msgs:/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
 
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Whirlybird.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG whirlybird_msgs/Whirlybird"
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/Whirlybird.msg -Iwhirlybird_msgs:/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/MyStates.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating Python from MSG whirlybird_msgs/MyStates"
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg/MyStates.msg -Iwhirlybird_msgs:/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs/msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p whirlybird_msgs -o /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg
 
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
-/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /opt/ros/kinetic/lib/genpy/genmsg_py.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
+/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating Python msg __init__.py for whirlybird_msgs"
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg --initpy
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genpy/cmake/../../../lib/genpy/genmsg_py.py -o /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg --initpy
 
 whirlybird_msgs_generate_messages_py: whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py
-whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
-whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
-whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
-whirlybird_msgs_generate_messages_py: /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py
+whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Command.py
+whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_Whirlybird.py
+whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/_MyStates.py
+whirlybird_msgs_generate_messages_py: /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/devel/lib/python2.7/dist-packages/whirlybird_msgs/msg/__init__.py
 whirlybird_msgs_generate_messages_py: whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/build.make
 
 .PHONY : whirlybird_msgs_generate_messages_py
@@ -100,6 +100,6 @@ whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/clean:
 .PHONY : whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/clean
 
 whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/depend:
-	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src /fsc/rrhodes2/me431/new_whirly/whirlybird_ws/src/whirlybird_msgs /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs /auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/build/whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : whirlybird_msgs/CMakeFiles/whirlybird_msgs_generate_messages_py.dir/depend
 

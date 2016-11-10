@@ -19,7 +19,7 @@ km = 5.8#6.293 #5.8               # , N/PWM
 
 # Initial Conditions
 phi0 =   0.0*np.pi/180 # ,rads
-theta0 = 0.0#-.48632 #0.0*np.pi/180 # ,rads
+theta0 = -.48632 #0.0*np.pi/180 # ,rads
 psi0 = 0.0*np.pi/180   # ,rads
 phidot0 = 0.0          # ,rads/s
 thetadot0 = 0.0        # ,rads/s
@@ -27,7 +27,7 @@ psidot0 = 0.0          # ,rads/s
 F_eq = 5.223
 
 # Simulation parameters
-Ts = 0.0033                # Time step
+Ts = 0.005#33 #0.01                # Time step
 sigma = 0.05
 
 
@@ -78,13 +78,15 @@ th_wn = 2.2/th_tr     # Natural frequency
 th_alpha1 = 2.0*th_zeta*th_wn
 th_alpha0 = th_wn**2 
 
-integrator_pole_long = -10.0
+integrator_pole_long = -10.0#-10.0
 
 
 # Desired Poles
 des_char_poly_long = np.convolve([1,th_alpha1,th_alpha0],
 	np.poly(integrator_pole_long))
 des_poles_long = np.roots(des_char_poly_long)
+print 'des_poles_long'
+print des_poles_long
 
 
 # Controllability Matrix
@@ -140,7 +142,7 @@ psi_alpha0 = psi_wn**2
 phi_tr = psi_tr*M      # Rise time, s
 phi_zeta = 0.707      # Damping Coefficient
 phi_wn = 2.2/phi_tr     # Natural frequency
-integrator_pole_lat = -10.0
+integrator_pole_lat = -15.0
 
 # S**2 + alpha1*S + alpha0
 phi_alpha1 = 2.0*phi_zeta*phi_wn
@@ -151,6 +153,8 @@ des_char_poly_lat = np.convolve(
 	np.convolve([1,psi_alpha1,psi_alpha0],[1,phi_alpha1,phi_alpha0]),
 	np.poly(integrator_pole_lat))
 des_poles_lat = np.roots(des_char_poly_lat)
+print 'des_poles_lat'
+print des_poles_lat
 
 
 # Controllability Matrix
@@ -170,7 +174,7 @@ else:
 #################################################
 #          Uncertainty Parameters
 #################################################
-UNCERTAINTY_PARAMETERS = False
+UNCERTAINTY_PARAMETERS = False #False
 if UNCERTAINTY_PARAMETERS:
 	alpha = 0.2;                                    # uncertainty parameter
 	l1 = 0.85*(1+2*alpha*np.random.rand()-alpha)    # Distance between fulcrum 

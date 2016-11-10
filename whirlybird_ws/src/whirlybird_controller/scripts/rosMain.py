@@ -10,9 +10,9 @@ from slider_input import Sliders
 
 # from lab7.controllerPD import controllerPD as ctrl
 # from lab8.controllerPD import controllerPD as ctrl
-from lab10.controllerPID import controllerPID as ctrl 
+#from lab10.controllerPID import controllerPID as ctrl 
 # from lab11.controllerSS import controllerSS as ctrl
-# from lab12.controllerSSI import controllerSSI as ctrl
+from lab12.controllerSSI import controllerSSI as ctrl
 # from lab13.controllerObs import controllerObs as ctrl
 # from lab14.controllerObsD import controllerObsD as ctrl
 
@@ -25,7 +25,10 @@ SLIDERS = True
 # right forces produced by the propellers.
 def convertForces(u):
     F = u[0]         # Force, N
+    # rospy.logwarn(str(F))
     tau = u[1]       # Torque, Nm
+    # rospy.logwarn(str(tau))
+    
     # Convert Force and Torque to fl and fr
     # fl is the force created by the left propeller
     # fr is the force created by the right propeller

@@ -1,8 +1,8 @@
-prefix=/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install
+prefix=/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install
 
 Name: whirlybird_controller
 Description: Description of whirlybird_controller
 Version: 0.0.0
 Cflags: 
-Libs: -L/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install/lib 
+Libs: -L/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install/lib 
 Requires: 

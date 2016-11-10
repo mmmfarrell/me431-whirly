@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/auto/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/fsc/rrhodes2/me431/new_whirly/whirlybird_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
