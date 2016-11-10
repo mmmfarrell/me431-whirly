@@ -1,0 +1,7 @@
+<launch>
+
+	<node name="whirlybird_calibration" pkg="whirlybird_calibration" type = "calibrationMain.py" />
+	
+
+</launch>
+

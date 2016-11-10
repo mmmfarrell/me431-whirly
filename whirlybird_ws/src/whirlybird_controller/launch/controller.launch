@@ -1,0 +1,6 @@
+<launch>
+
+	<node name="whirlybird_controller" pkg="whirlybird_controller" type = "rosMain.py" />	
+
+</launch>
+
