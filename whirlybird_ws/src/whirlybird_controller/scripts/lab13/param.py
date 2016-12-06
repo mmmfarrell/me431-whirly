@@ -28,7 +28,7 @@ psidot0 = 0.0          # ,rads/s
 F_eq = 5.223
 
 # Simulation parameters
-Ts = 0.01#0.005#33 #0.01                # Time step
+Ts = 0.0033#33 #0.01                # Time step
 sigma = 0.05
 
 
@@ -103,7 +103,8 @@ else:
 
 ###### OBSERVER #############
 # Observer design
-obs_th_wn = 5.0*th_wn 
+# obs_th_wn = 5.0*th_wn 
+obs_th_wn = 8.0*th_wn 
 obs_des_char_poly_long = [1,2.0*th_zeta*obs_th_wn,obs_th_wn**2]
 obs_des_poles_long = np.roots(obs_des_char_poly_long)
 
@@ -148,8 +149,9 @@ B1_lat = np.concatenate((B_lat,np.matrix([[0.0]])),axis = 0)
 # Desired Closed Loop tuning parameters
 # S**2 + 2*zeta*wn*S + wn**2
 
-psi_tr = 2.0#0.5           # Rise time, s
-psi_zeta = 0.8#0.707       # Damping Coefficient
+psi_tr = 4.0#2.5#2.5#0.5           # Rise time, s
+# psi_tr = 5.0#0.5           # Rise time, s
+psi_zeta = 1.0#0.707       # Damping Coefficient
 psi_wn = 2.2/psi_tr     # Natural frequency
 
 # S**2 + alpha1*S + alpha0
@@ -159,10 +161,10 @@ psi_alpha0 = psi_wn**2
 # Desired Closed Loop tuning parameters
 # S**2 + 2*zeta*wn*S + wn**2
 
-phi_tr = 1.5#0.66667#psi_tr/M      # Rise time, s
+phi_tr = 0.35#0.7#0.666#0.666#2.0#1.5#0.66667#psi_tr/M      # Rise time, s
 phi_zeta = 1.0#0.707      # Damping Coefficient
 phi_wn = 2.2/phi_tr     # Natural frequency
-integrator_pole_lat = -15.0
+integrator_pole_lat = -20#-15.0
 
 # S**2 + alpha1*S + alpha0
 phi_alpha1 = 2.0*phi_zeta*phi_wn
@@ -190,8 +192,10 @@ else:
 
 ###### OBSERVER #############
 # Observer design
-obs_phi_wn = 5.0*phi_wn 
-obs_psi_wn = 5.0*psi_wn 
+# obs_phi_wn = 5.0*phi_wn 
+obs_phi_wn = 8.5*phi_wn 
+# obs_psi_wn = 5.0*psi_wn 
+obs_psi_wn = 8.5*psi_wn 
 obs_des_char_poly_lat = np.convolve([1,2.0*psi_zeta*obs_psi_wn,obs_psi_wn**2],
 								 [1,2.0*phi_zeta*obs_phi_wn,obs_phi_wn**2])
 
@@ -203,11 +207,11 @@ obs_des_poles_lat = np.roots(obs_des_char_poly_lat)
 if np.linalg.matrix_rank(cnt.obsv(A_lat,C_lat))!=4:
 	print("The lateral system is not Observable")
 else:
-	# L_lat = place(A_lat.T,C_lat.T,obs_des_poles_lat).gain_matrix.T
-	L_lat = np.matrix([[11.1614,	-1.0628],
-			   [7.6664,		12.3053],
-			   [31.1417,		-8.7392],
-			   [62.2134,			36.4611]])
+	L_lat = place(A_lat.T,C_lat.T,obs_des_poles_lat).gain_matrix.T
+	# L_lat = np.matrix([[11.1614,	-1.0628],
+	# 		   [7.6664,		12.3053],
+	# 		   [31.1417,		-8.7392],
+	# 		   [62.2134,			36.4611]])
 	print('L_lat:', L_lat)
 		# K1_lat = cnt.acker(A1_lat,B1_lat,des_poles_lat)
 		# K_lat = K1_lat[0,0:4]

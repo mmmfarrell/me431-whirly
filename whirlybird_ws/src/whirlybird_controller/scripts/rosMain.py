@@ -12,8 +12,8 @@ from slider_input import Sliders
 # from lab8.controllerPD import controllerPD as ctrl
 #from lab10.controllerPID import controllerPID as ctrl 
 # from lab11.controllerSS import controllerSS as ctrl
-from lab12.controllerSSI import controllerSSI as ctrl
-# from lab13.controllerObs import controllerObs as ctrl
+# from lab12.controllerSSI import controllerSSI as ctrl
+from lab13.controllerObs import controllerObs as ctrl
 # from lab14.controllerObsD import controllerObsD as ctrl
 
 # If SLIDERS is false, then the input will be generated from 
